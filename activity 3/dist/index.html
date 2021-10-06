@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Activity 3</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="myDiv">
+        <p v-if="seen">Showed</p>
+        <input type="checkbox" v-model="seen">
+    </div>
+    <div id="form-user">
+        <input v-model="message" placeholder="Name">
+        <button v-on:click="submitUser">Submit</button>
+        <ul>
+            <li v-for="user of users">
+                <p>{{user}}</p>
+            </li>
+        </ul>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+
+</html>
